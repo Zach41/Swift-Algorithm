@@ -1,0 +1,266 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A61E613703C6025C8F93E45 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A61EFF904F86E24AEF76749 /* Info.plist */; };
+		2A61E86B27265FD1F297FCDE /* BTreeNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A61EBCEC5105CF4A1F55B08 /* BTreeNodeTests.swift */; };
+		2A61E87CF4427612901DF92A /* BTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A61E08B30772D3D7665C445 /* BTree.swift */; };
+		2A61E8A6B5400ECE9295AC66 /* BTreeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A61E09CD5E8AAF689A2CC2E /* BTreeTest.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2A61E08B30772D3D7665C445 /* BTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTree.swift; sourceTree = "<group>"; };
+		2A61E09CD5E8AAF689A2CC2E /* BTreeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTreeTest.swift; sourceTree = "<group>"; };
+		2A61E363FA8C80F859EDF8A0 /* BTreeTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BTreeTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A61EBCEC5105CF4A1F55B08 /* BTreeNodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTreeNodeTests.swift; sourceTree = "<group>"; };
+		2A61EFF904F86E24AEF76749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A61E1FF7DCFC46043577847 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A61E198CD570F49107E79AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A61E363FA8C80F859EDF8A0 /* BTreeTest.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A61E393C1D09406FF07B442 /* BTreeTest */ = {
+			isa = PBXGroup;
+			children = (
+				2A61EFF904F86E24AEF76749 /* Info.plist */,
+				2A61E09CD5E8AAF689A2CC2E /* BTreeTest.swift */,
+				2A61E08B30772D3D7665C445 /* BTree.swift */,
+				2A61EBCEC5105CF4A1F55B08 /* BTreeNodeTests.swift */,
+			);
+			path = BTreeTest;
+			sourceTree = "<group>";
+		};
+		2A61EFBD33CC2F112F1CFBC9 = {
+			isa = PBXGroup;
+			children = (
+				2A61E198CD570F49107E79AD /* Products */,
+				2A61E393C1D09406FF07B442 /* BTreeTest */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2A61EA1B433D7A7073AAAABB /* BTreeTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A61E07F154AC198EDC4EF4B /* Build configuration list for PBXNativeTarget "BTreeTest" */;
+			buildPhases = (
+				2A61EB4D54DDD8593972BBE1 /* Sources */,
+				2A61E1FF7DCFC46043577847 /* Frameworks */,
+				2A61EDB5DA57D5725E3C605F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BTreeTest;
+			productName = BTreeTest;
+			productReference = 2A61E363FA8C80F859EDF8A0 /* BTreeTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A61E3B19C1AE914A470605A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 2A61E6A1006251A72435FDD4 /* Build configuration list for PBXProject "BTree" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2A61EFBD33CC2F112F1CFBC9;
+			productRefGroup = 2A61E198CD570F49107E79AD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A61EA1B433D7A7073AAAABB /* BTreeTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2A61EDB5DA57D5725E3C605F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A61E613703C6025C8F93E45 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A61EB4D54DDD8593972BBE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A61E8A6B5400ECE9295AC66 /* BTreeTest.swift in Sources */,
+				2A61E87CF4427612901DF92A /* BTree.swift in Sources */,
+				2A61E86B27265FD1F297FCDE /* BTreeNodeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2A61E4679C6305448D997893 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		2A61E5EE8B01897990B18562 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = BTreeTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = zach.BTreeTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		2A61E7FD6A01C22114D16586 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		2A61EAC20FFFB0E16D555405 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = BTreeTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = zach.BTreeTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A61E07F154AC198EDC4EF4B /* Build configuration list for PBXNativeTarget "BTreeTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A61EAC20FFFB0E16D555405 /* Debug */,
+				2A61E5EE8B01897990B18562 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2A61E6A1006251A72435FDD4 /* Build configuration list for PBXProject "BTree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A61E4679C6305448D997893 /* Debug */,
+				2A61E7FD6A01C22114D16586 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A61E3B19C1AE914A470605A /* Project object */;
+}
