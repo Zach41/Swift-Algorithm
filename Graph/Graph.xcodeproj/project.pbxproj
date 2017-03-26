@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A61E067C483CCE5D19FA635 /* AdjacencyListGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A61E02DA439E644E5E0F110 /* AdjacencyListGraph.swift */; };
+		2A61E16881D003D205493134 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A61E6171282E34B930F9A9D /* Queue.swift */; };
 		2A61E540667299823EFDD2B2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A61E219160B4A9BB04AC44B /* Info.plist */; };
 		2A61E62B4C1A603E2E51B39B /* GraphTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A61EDEA92EE8D86D2AF35A4 /* GraphTest.swift */; };
 		2A61E66669F1519C2BC13CD1 /* AdjacencyMatrixGrapgh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A61E111865DD4CD3058F1F4 /* AdjacencyMatrixGrapgh.swift */; };
@@ -23,6 +24,7 @@
 		2A61E12BAC58A855ECFADA48 /* AbstractGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractGraph.swift; sourceTree = "<group>"; };
 		2A61E219160B4A9BB04AC44B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		2A61E2BB8DE777EA8FC78621 /* GraphTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraphTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A61E6171282E34B930F9A9D /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		2A61E9443E586FB9C9A047AF /* Edge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
 		2A61EDEA92EE8D86D2AF35A4 /* GraphTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,6 +58,7 @@
 				2A61E12BAC58A855ECFADA48 /* AbstractGraph.swift */,
 				2A61E02DA439E644E5E0F110 /* AdjacencyListGraph.swift */,
 				2A61E111865DD4CD3058F1F4 /* AdjacencyMatrixGrapgh.swift */,
+				2A61E6171282E34B930F9A9D /* Queue.swift */,
 			);
 			path = GraphTest;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 				2A61E68DE99FD14DA173BF13 /* AbstractGraph.swift in Sources */,
 				2A61E067C483CCE5D19FA635 /* AdjacencyListGraph.swift in Sources */,
 				2A61E66669F1519C2BC13CD1 /* AdjacencyMatrixGrapgh.swift in Sources */,
+				2A61E16881D003D205493134 /* Queue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

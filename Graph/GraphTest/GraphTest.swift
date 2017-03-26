@@ -141,4 +141,59 @@ class GraphTest: XCTestCase {
         graph = AdjacencyListGraph<Int>()
         testLargeGraph(graph)
     }
+
+    func testDFS(_ graph: AbstractGraph<Int>) {
+//        let graph = AdjacencyMatrixGrapgh<Int>()
+
+        let a = graph.createVertex(1)
+        let b = graph.createVertex(2)
+        let c = graph.createVertex(3)
+        let d = graph.createVertex(4)
+        let e = graph.createVertex(5)
+
+        graph.addDirectedEdge(a, to: b, withWeight: 1.0)
+        graph.addDirectedEdge(a, to: d, withWeight: 1.0)
+        graph.addDirectedEdge(b, to: c, withWeight: 1.0)
+        graph.addDirectedEdge(c, to: d, withWeight: 1.0)
+        graph.addDirectedEdge(d, to: b, withWeight: 1.0)
+        graph.addDirectedEdge(d, to: e, withWeight: 1.0)
+
+        let dfsTraversed = graph.dfsTraverse(source: a)
+        XCTAssertEqual(dfsTraversed, [a, b, c, d, e])
+    }
+
+    func testBFS(_ graph: AbstractGraph<Int>) {
+//        let graph = AdjacencyMatrixGrapgh<Int>()
+
+        let a = graph.createVertex(1)
+        let b = graph.createVertex(2)
+        let c = graph.createVertex(3)
+        let d = graph.createVertex(4)
+        let e = graph.createVertex(5)
+
+        graph.addDirectedEdge(a, to: b, withWeight: 1.0)
+        graph.addDirectedEdge(a, to: d, withWeight: 1.0)
+        graph.addDirectedEdge(b, to: c, withWeight: 1.0)
+        graph.addDirectedEdge(c, to: d, withWeight: 1.0)
+        graph.addDirectedEdge(d, to: b, withWeight: 1.0)
+        graph.addDirectedEdge(d, to: e, withWeight: 1.0)
+
+        let dfsTraversed = graph.bfsTraverse(source: a)
+        XCTAssertEqual(dfsTraversed, [a, b, d, c, e])
+    }
+
+    func testAdjacencyListTraverse() {
+        var graph = AdjacencyListGraph<Int>()
+        testDFS(graph)
+        graph = AdjacencyListGraph<Int>()
+        testBFS(graph)
+    }
+
+    func testAdjacencyMatrixTraverse() {
+        var graph = AdjacencyMatrixGrapgh<Int>()
+        testDFS(graph)
+        graph = AdjacencyMatrixGrapgh()
+        testBFS(graph)
+    }
+
 }

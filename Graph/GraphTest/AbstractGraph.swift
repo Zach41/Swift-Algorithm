@@ -55,4 +55,55 @@ open class AbstractGraph<T>: CustomStringConvertible where T: Equatable, T: Hash
     open func edgesFrom(_ sourceVertex: Vertex<T>) -> [Edge<T>] {
         fatalError("abstract function called")
     }
+
+//    open func dfsTraverse(source: Vertex<T>) -> [Vertex<T>] {
+//        fatalError("abstract function called")
+//    }
+//
+//    open func bfsTraverse(source: Vertex<T>) -> [Vertex<T>] {
+//        fatalError("abstract function called")
+//    }
+
+    private func _dfsTraverse(source: Vertex<T>, visited visited: inout [Bool]) -> [Vertex<T>] {
+        guard !visited[source.index] else {
+            return []
+        }
+
+        var outValues = [source]
+        visited[source.index] = true
+        let edges = edgesFrom(source)
+        for edge in edges {
+            outValues += _dfsTraverse(source: edge.to, visited: &visited)
+        }
+
+        return outValues
+    }
+
+    public func dfsTraverse(source: Vertex<T>) -> [Vertex<T>] {
+        var visited = [Bool](repeating: false, count: vertices.count)
+
+        return _dfsTraverse(source: source, visited: &visited)
+    }
+
+    public func bfsTraverse(source: Vertex<T>) -> [Vertex<T>] {
+        var visited = [Bool](repeating: false, count: vertices.count)
+
+        var outValues = [Vertex<T>]()
+        var nodeQueue = Queue<Vertex<T>>()
+        nodeQueue.enqueue(source)
+
+        while !nodeQueue.isEmpty {
+            let top = nodeQueue.dequeue()!
+            guard !visited[top.index] else {
+                continue
+            }
+            visited[top.index] = true
+            outValues.append(top)
+            let edges = edgesFrom(top)
+            for edge in edges {
+                nodeQueue.enqueue(edge.to)
+            }
+        }
+        return outValues
+    }
 }
