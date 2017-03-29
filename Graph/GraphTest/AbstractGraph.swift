@@ -106,4 +106,8 @@ open class AbstractGraph<T>: CustomStringConvertible where T: Equatable, T: Hash
         }
         return outValues
     }
+
+    open func dijkstra(_ sourceVertex: Vertex<T>) -> [Double] {
+        fatalError("abstract function called")
+    }
 }

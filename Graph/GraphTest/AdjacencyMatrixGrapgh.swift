@@ -104,4 +104,34 @@ open class AdjacencyMatrixGrapgh<T>: AbstractGraph<T> where T: Equatable, T: Has
         }
         return grid.joined(separator: "\n")
     }
+
+    open override func dijkstra(_ sourceVertex: Vertex<T>) -> [Double] {
+        var visited = [Bool](repeating: false, count: vertices.count)
+        var dist = [Double](repeating: DBL_MAX, count: vertices.count)
+
+        visited[sourceVertex.index] = true
+        for idx in 0..<vertices.count {
+            dist[idx] = adjacencyMatrix[sourceVertex.index][idx] ?? DBL_MAX
+        }
+        dist[sourceVertex.index] = 0
+
+        for _ in 0..<vertices.count - 1 {
+            var minDist = DBL_MAX
+            var minIdx = 0
+            for j in 0..<vertices.count {
+                if dist[j] < minDist && !visited[j] {
+                    minIdx = j
+                    minDist = dist[j]
+                }
+            }
+            visited[minIdx] = true
+            for idx in 0..<vertices.count {
+                guard let edge = adjacencyMatrix[minIdx][idx] else { continue }
+                if dist[idx] > dist[minIdx] + edge {
+                    dist[idx] = dist[minIdx] + edge
+                }
+            }
+        }
+        return dist
+    }
 }

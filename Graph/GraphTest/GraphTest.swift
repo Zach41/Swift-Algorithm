@@ -196,4 +196,53 @@ class GraphTest: XCTestCase {
         testBFS(graph)
     }
 
+    func testAdjacencyMatrixDijkstra() {
+        let graph = AdjacencyMatrixGrapgh<Int>()
+
+        let a1 = graph.createVertex(1)
+        let a2 = graph.createVertex(2)
+        let a3 = graph.createVertex(3)
+        let a4 = graph.createVertex(4)
+        let a5 = graph.createVertex(5)
+        let a6 = graph.createVertex(6)
+
+        graph.addDirectedEdge(a1, to: a2, withWeight: 1.0)
+        graph.addDirectedEdge(a1, to: a3, withWeight: 12.0)
+        graph.addDirectedEdge(a2, to: a3, withWeight: 9.0)
+        graph.addDirectedEdge(a2, to: a4, withWeight: 3.0)
+        graph.addDirectedEdge(a3, to: a5, withWeight: 5.0)
+        graph.addDirectedEdge(a4, to: a3, withWeight: 4.0)
+        graph.addDirectedEdge(a4, to: a5, withWeight: 13.0)
+        graph.addDirectedEdge(a4, to: a6, withWeight: 15.0)
+        graph.addDirectedEdge(a5, to: a6, withWeight: 4.0)
+
+        let shortestPathsFromA1 = graph.dijkstra(a1);
+
+        XCTAssertEqual(shortestPathsFromA1, [0.0, 1.0, 8.0, 4.0, 13.0, 17.0])
+    }
+
+    func testAdjacencyListDijkstra() {
+        let graph = AdjacencyListGraph<Int>()
+
+        let a1 = graph.createVertex(1)
+        let a2 = graph.createVertex(2)
+        let a3 = graph.createVertex(3)
+        let a4 = graph.createVertex(4)
+        let a5 = graph.createVertex(5)
+        let a6 = graph.createVertex(6)
+
+        graph.addDirectedEdge(a1, to: a2, withWeight: 1.0)
+        graph.addDirectedEdge(a1, to: a3, withWeight: 12.0)
+        graph.addDirectedEdge(a2, to: a3, withWeight: 9.0)
+        graph.addDirectedEdge(a2, to: a4, withWeight: 3.0)
+        graph.addDirectedEdge(a3, to: a5, withWeight: 5.0)
+        graph.addDirectedEdge(a4, to: a3, withWeight: 4.0)
+        graph.addDirectedEdge(a4, to: a5, withWeight: 13.0)
+        graph.addDirectedEdge(a4, to: a6, withWeight: 15.0)
+        graph.addDirectedEdge(a5, to: a6, withWeight: 4.0)
+
+        let shortestPathsFromA1 = graph.dijkstra(a1);
+
+        XCTAssertEqual(shortestPathsFromA1, [0.0, 1.0, 8.0, 4.0, 13.0, 17.0])
+    }
 }

@@ -118,5 +118,42 @@ public class AdjacencyListGraph<T>: AbstractGraph<T> where T: Equatable, T: Hash
             return rows.joined(separator: "\n")
         }
     }
+
+    open override func dijkstra(_ sourceVertex: Vertex<T>) -> [Double] {
+        var visited = [Bool](repeating: false, count: vertices.count)
+        var dist = [Double](repeating: DBL_MAX, count: vertices.count)
+
+        dist[sourceVertex.index] = 0
+        visited[sourceVertex.index] = true
+
+        let edgeList = adjacentList[sourceVertex.index]
+        guard let edges = edgeList.edges else {
+            return dist
+        }
+        for edge in edges {
+            dist[edge.to.index] = edge.weight ?? DBL_MAX
+        }
+
+        for _ in 0..<vertices.count - 1 {
+            var minDist = DBL_MAX
+            var minIdx = 0
+            for j in 0..<vertices.count {
+                if minDist > dist[j] && !visited[j] {
+                    minIdx = j
+                    minDist = dist[j]
+                }
+            }
+            visited[minIdx] = true
+            guard let edges = adjacentList[minIdx].edges else {
+                continue
+            }
+            for edge in edges {
+                if dist[edge.to.index] > dist[minIdx] + edge.weight! {
+                    dist[edge.to.index] = dist[minIdx] + edge.weight!
+                }
+            }
+        }
+        return dist
+    }
 }
 
